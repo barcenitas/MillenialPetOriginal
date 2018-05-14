@@ -1,0 +1,137 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+            <title>Millennial Pet</title>
+
+	        <meta charset="utf-8">
+	        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            <!-- LINKEOS -->
+            <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <link rel="shortcut icon" type="image/x-icon" href="{{%static 'img/logo2.png' %}}" />
+            <link rel="stylesheet" href="{%static 'css/styleIndex.css' %}">
+            <link rel="stylesheet" href="{%static 'https://fonts.googleapis.com/css?family=Jockey+One' %}">
+            <link rel="stylesheet" href="{%static 'css/buttons.css' %}">
+            <link rel="stylesheet" href="{%static 'css/materialize.min.css' %}">
+
+
+            <!-- TERMINAN LINKEOS -->
+    </head>
+
+    <body>
+
+            <!-- COMIENZO DEL NAV -->
+            <a name="arriba"></a>
+            <div class="navbar-fixed">
+            <nav>
+                    <div id="site-header" class="nav-wrapper black">
+                        <a href="{{%static 'index.html' %}}" class="brand-logo center"><img src="{{%static 'img/logo240.png ' %}}"></a>
+                        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                        <ul class="left hide-on-med-and-down">
+                                <li><a href="{{%static 'packs.html' %}}">Paquetes</a></li>
+                                <li><a href="{{%static 'productos.html' %}}">Productos</a></li>
+                                <li><a href="{{%static 'promociones.html' %}}">Promociones</a></li>
+                        </ul>
+                        <ul class="right hide-on-med-and-down">
+                                <li><a href="{{%static 'registro-Login.html' %}}">Únete</a></li>
+                                <li><a href="{{%static 'contacto.html' %}}">Contacto</a></li>
+                                <li><a href="{{%static 'acercade.html' %}}">¿Quiénes somos?</a></li>
+                        </ul>
+                    </div>
+            </nav>
+            </div>
+    </body>
+<!-- TERMINA NAV -->
+
+<!-- COMIENZA SIDENAV -->
+ <ul class="sidenav blue-darken" id="mobile-demo">
+    <li><div class="user-view">
+      <div class="background">
+        <img class="responsive-img" src="{{%static ' img/bulldog3.jpg' %}}">
+      </div>
+      <a href="#user"><img class="circle" src="{{%static ' img/logo1.png' %}}"></a>
+      <a href="#name"><span class="white-text name">Millennial Pet</span></a>
+      <a href="#email"><span class="white-text email">Sonríe más, ladra menos</span></a>
+    </div></li>
+
+     <li><a href="{{%static ' index.html' %}}"><i class="material-icons">home</i>Home</a></li>
+     <li><a href="{{%static ' packs.html' %}}"><i class="material-icons">card_travel</i>Paquetes</a></li>
+     <li><a href="{{%static ' productos.html' %}}"><i class="material-icons">dialpad</i>Productos</a></li>
+     <li><a href="{{%static ' promociones.html' %}}"><i class="material-icons">attach_money</i>Promociones</a></li>
+     <li><a href="{{%static ' contacto.html' %}}"><i class="material-icons">call</i>Contacto</a></li>
+
+    <li><div class="divider"></div></li>
+    <li><a class="subheader"><i class="material-icons">person</i> Cuenta</a></li>
+    <li><a class="waves-effect" href="{{%static ' iniciarSesión.html' %}}"><i class="material-icons">subdirectory_arrow_right</i> Iniciar sesión</a></li>
+    <li><a class="waves-effect" href="{{%static ' registro.html' %}}"><i class="material-icons">person_add</i> Registrarse</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="waves-effect" href="{{%static ' acercade.html' %}}"><i class="material-icons"></i>Acerca de nosotros</a></li>
+
+  </ul>
+<!-- TERMINA SIDENAV -->
+
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+
+
+    <!-- SCRIPTS -->
+    <script src="{{%static 'js/jquery-index.js' %}}"></script>
+    <script src="{{%static 'js/materialize-index.min.js' %}}"></script>
+    <script type="text/javascript" src="{{%static 'js/app-promos.js' %}}"></script>
+    <script src="{{%static 'js/styleTienda.css' %}}"></script>
+
+
+    <!-- COMIENZA FOOTER -->
+    <footer class="page-footer  black"  id="myFooter" >
+
+    <div class="row">
+        <center>
+                <div class="col s12">¡SÍGUENOS EN NUESTRAS REDES SOCIALES!</div>
+                    <div class="col s4"></div>
+
+                        <div class="row">
+                            <div class="col s3"></div>
+
+                                <div class="col s12">
+
+                                <br>
+                                <br>
+                                <span><a href="#arriba" title="Ir arriba"><img src="{{%static 'img/up.png' %}}" border="0" width="70" height="70"  href="#abajo" title="Ir arriba"></a></span>
+                                <br>
+                                <a href="{{%static 'https://www.instagram.com/millennialpetoriginal/' %}}" target=”_blank”><img src="{{%static 'img/icon8/instagram.png' %}}"/></a>
+                                <a href="{{%static 'https://twitter.com/MillennialPet' %}}" target=”_blank”><img src="{{%static 'img/icon8/twitter.png' %}}"/></a>
+                                <a href="{{%static 'https://www.youtube.com/channel/UClZJUBkm3fOpqYz1H1myjkQ' %}}" target=”_blank”><img src="img/icon8/youtube.png' %}}"/></a>
+                                <a href="{{%static 'https://github.com/barcenitas/MillennialPet' %}}" target=”_blank”><img src="{{%static 'img/icon8/github-circle.png' %}}"/></a>
+                                <a href="{{%static 'https://www.facebook.com/Millenial-Pet-127486044782676/' %}}" target=”_blank”><img src="{{%static 'img/icon8/facebook.png' %}}"/></a>
+
+
+                                </div>
+                                <div class="col s3"></div>
+
+                        </div>
+
+
+                        <div class="row">
+                                <div class="col s3"></div>
+                                <div class="col s3"><br>Todos los derechos reservados</div>
+                                <div class="col s3"><br>Millennial Pet S.A de C.V</div>
+                                <div class="col s3"></div>
+                        </div>
+
+
+                        <div class="footer-copyright">
+                            <div class="col s12">
+                                    © 2018 Copyright
+                            </div>
+                        </div>
+                        <br>
+                </div>
+        </center>
+    </footer>
+<!-- TERMINA FOOTER -->

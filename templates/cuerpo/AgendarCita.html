@@ -1,0 +1,41 @@
+<!--Linkeos necesarios para que aparezca el calendario-->
+<!------Scripts-->
+
+<!--------------->
+<script type="text/javascript" src="/admin/jsi18n/"></script>
+<script type="text/javascript" src="/static/admin/js/core.js"></script>
+<script type="text/javascript" src="/static/admin/js/calendar.js"></script>
+<link rel="stylesheet" type="text/css" href="/admin/media/css/forms.css">
+<link rel="stylesheet" type="text/css" href="/admin/media/css/base.css">
+<link rel="stylesheet" type="text/css" href="/admin/media/css/widget.css">
+
+
+<link rel="stylesheet" type="text/css" href="/static/suit/css/suit.css" media="all">
+<link rel="stylesheet" type="text/css" href="/static/suit/bootstrap/css/bootstrap.min.css" media="all"/>
+<!--Fin de los linkeos-->
+{% block content %}
+<h1>Agendar cita</h1>
+    {{ form.media }}
+
+    <form method="get" class="post-form">
+
+        <br>
+        Número de paquete: {{ form.num_paquete }}
+        <br>
+        {{ form.hora_inicio }}
+        <br>
+        Fecha: {{ form.hora }}
+        <br>
+        Hora de inicio: {{ form.fecha2 }}
+    <!--Aqui va un form de django-->
+        <br>
+    <button type="submit" class="save btn btn-default">Nueva cita</button>
+    </form>
+
+{% endblock %}
+
+<!--->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js" type="text/javascript"></script>
+
+

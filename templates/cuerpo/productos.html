@@ -1,0 +1,259 @@
+{%  load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Millennial Pet</title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- LINKEOS -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href={% static 'img/logo2.png' %} />
+  <link rel="stylesheet" href={% static 'css/styleIndex.css' %}>
+  <link href="https://fonts.googleapis.com/css?family=Jockey+One" rel="stylesheet">
+  <link rel="stylesheet" href={% static 'css/buttons.css' %}>
+  <link rel="stylesheet" href={% static 'css/materialize.min.css' %}>
+  <link rel="stylesheet" href={% static 'css/styleTienda.css'%}>
+
+
+  <!-- TERMINAN LINKEOS -->
+</head>
+
+<body>
+
+  <!-- COMIENZO DEL NAV -->
+<a name="arriba"></a>
+<div class="navbar-fixed">
+<nav>
+    <div id="site-header" class="nav-wrapper black">
+      <a href="{% url 'index' %}" class="brand-logo center"><img src={% static 'img/logo240.png' %}></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="left hide-on-med-and-down">
+        <li><a href="{% url 'packs' %}">Paquetes</a></li>
+        <li><a href="{% url 'productos' %}">Productos</a></li>
+        <li><a href="{% url 'promociones' %}">Promociones</a></li>
+      </ul>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="{% url 'unete' %}">Únete</a></li>
+        <li><a href="{% url 'contacto' %}">Contacto</a></li>
+        <li><a href="{% url 'acercade' %}">¿Quiénes somos?</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+</div>
+<!-- TERMINA NAV -->
+<!-- COMIENZA SIDENAV -->
+  <ul class="sidenav blue-darken" id="mobile-demo">
+    <li><div class="user-view">
+      <div class="background">
+        <img class="responsive-img" src="{% static 'img/bulldog3.jpg' %}">
+      </div>
+      <a href="#user"><img class="circle" src={% static 'img/logo1.png' %}></a>
+      <a href="#name"><span class="white-text name">Millennial Pet</span></a>
+      <a href="#email"><span class="white-text email">Sonríe más, ladra menos</span></a>
+    </div></li>
+
+     <li><a href="{% url 'index' %}"><i class="material-icons">home</i>Home</a></li>
+     <li><a href="{% url 'packs' %}"><i class="material-icons">card_travel</i>Paquetes</a></li>
+     <li><a href="{% url 'productos' %}"><i class="material-icons">dialpad</i>Productos</a></li>
+     <li><a href="{% url 'promociones' %}"><i class="material-icons">attach_money</i>Promociones</a></li>
+     <li><a href="{% url 'contacto' %}"><i class="material-icons">call</i>Contacto</a></li>
+
+    <li><div class="divider"></div></li>
+    <li><a class="subheader"><i class="material-icons">person</i> Cuenta</a></li>
+    <li><a class="waves-effect" href="{% url 'login'%}"><i class="material-icons">subdirectory_arrow_right</i> Iniciar sesión</a></li>
+    <li><a class="waves-effect" href="{% url 'registrarse' %}"><i class="material-icons">person_add</i> Registrarse</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="waves-effect" href="{% url 'acercade' %}"><i class="material-icons"></i>Acerca de nosotros</a></li>
+
+  </ul>
+<!-- TERMINA SIDENAV -->
+
+
+<nav>
+    <div class="nav-wrapper black">
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            
+            <ul class="brand-logo center">
+            <li><font color=white><input  type="text" size="30" placeholder="Buscar" ng-model="search"></font></li>
+            </ul>
+            
+            <ul class="left hide-on-med-and-down">
+              <li><a href="#"></a></li> 
+              <li><a href="#">Ropa</a></li>
+              <li><a href="badges.html">Juguetes</a></li>
+              <li><a href="collapsible.html">Accesorios</a></li>
+              <li><a href="mobile.html">Extra</a></li>
+
+            </ul>
+
+            <ul class="right hide-on-med-and-down">
+          
+              <li><a href="iniciarSesión.html" targ et="_blank"><img src="img/carrito60.png" class="hide-on-med-and-down" alt="carro" width="38px"/></a></li>
+
+              <!-- Modal Trigger -->
+              <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Musiquita</a>
+
+              <!-- Modal Structure -->
+              <div id="modal1" class="modal">
+                <div class="modal-content">
+
+                  <audio controls>
+   
+    <source src="{% static 'src/Kungs - I FEEL SO BAD (Official Video) ft. Ephemerals.mp3' %}" type="audio/mpeg">
+   
+        <object type="application/x-shockwave-flash" data="player.swf?miArchivo=mi-archivo-de-audio.mp3">
+            <param name="movie" value="player.swf?miArchivo=mi-archivo-de-audio.mp3">
+        </object>
+</audio>
+
+                  <h4>Modal Header</h4>
+                  <p>A bunch of text</p>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                </div>
+              </div>
+            </ul>
+          </div>
+  </nav>
+
+
+
+
+<!--------------------------------Inician las cards------------------------------------>
+  <main>
+    {% block content %}
+    <div class="container">
+      <div class="row">
+        
+          {% for producto in productos %}
+
+          <div class="col s12 m6 l4" ng-repeat="n in movie.PlaM  | filter: search">
+            <div class="card large">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator responsive-img" src="{{ producto.imagen.url }}"  width="240" height="280" alt="imagen">
+              </div>
+              <div class="card-content">
+                <i class="material-icons right"></i></span>
+                <span class="card-title activator grey-text text-darken-4"><span>{{ producto.nombre }}
+                </span>
+              </div>
+              <div class="card-reveal">
+                <div>
+                  <span class="card-title grey-text text-darken-4">
+                    <span>{{ producto.nombre }}</span>
+                    <br>
+                    <i class="material-icons right"></i></span>
+                    <div class="img-zoom-container">
+                      <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+                      <script src='{% static 'js/zooomy.js' %}'></script>
+                          <script>
+                        $(document).ready(function(){
+                          $('#ex1').zoom();
+                          $('#ex2').zoom({ on:'grab' });
+                          $('#ex3').zoom({ on:'click' });
+                          $('#ex4').zoom({ on:'toggle' });
+                        });
+                      </script>
+                      <span class='zoom' id='ex1'>
+                        <center>
+                          <br>
+                          <img src='{{ producto.imagen.url }}'  width='200px' height='200px' alt='Milenial Pet'/>
+                        </center>
+                      </span>
+                      <br>
+                      <br>
+                      <div style="text-align:center;" style="text-align:justify"><font color=#000>{{ producto.descripcion }} </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-action">
+                  <div class="center">
+
+                    <a href="#" style="border-bottom:855px;"  style="border-right: 60px;"><font color=#000>Precio: <font color=#BD150B><b>{{ producto.precio }}</b></a>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+
+
+
+
+
+
+
+
+
+
+            </div>
+          </div>
+
+    {% endblock %}
+
+
+
+
+
+
+
+
+        </body>
+
+
+      <!-- COMIENZA FOOTER -->
+  <footer class="page-footer  black"  id="myFooter" >
+
+   <div class="row">
+    <center>
+      <div class="col s12">¡SÍGUENOS EN NUESTRAS REDES SOCIALES!</div>
+      <div class="col s4"></div>
+
+      <div class="row">
+        <div class="col s3"></div>
+
+        <div class="col s12">
+          <center>
+            <br>
+            <br>
+            <span><a href="#arriba" title="Ir arriba"><img src="{% static 'img/up.png' %}" border="0" width="70" height="70"  href="#abajo" title="Ir arriba"></a></span>
+            <br>
+            <a href="https://www.instagram.com/millennialpetoriginal/" target=”_blank”><img src={% static 'img/icon8/instagram.png' %}/></a>
+            <a href="https://twitter.com/MillennialPet" target=”_blank”><img src={% static 'img/icon8/twitter.png' %}/></a>
+            <a href="https://www.youtube.com/channel/UClZJUBkm3fOpqYz1H1myjkQ" target=”_blank”><img src={% static 'img/icon8/youtube.png' %}/></a>
+            <a href="https://github.com/barcenitas/MillennialPet" target=”_blank”><img src={% static 'img/icon8/github-circle.png' %}/></a>
+            <a href="https://www.facebook.com/Millenial-Pet-127486044782676/" target=”_blank”><img src={% static 'img/icon8/facebook.png' %}/></a>
+
+
+          </center>
+        </div>
+        <div class="col s3"></div>
+
+      </div>
+
+
+      <div class="row">
+        <div class="col s3"></div>
+        <div class="col s3"><br>Todos los derechos reservados</div>
+        <div class="col s3"><br>Millennial Pet S.A de C.V</div>
+        <div class="col s3"></div>
+      </div>
+
+
+      <div class="footer-copyright">
+        <div class="col s12">
+          © 2018 Copyright
+        </div>
+      </div>
+      <br>
+    </footer>
+<!-- TERMINA FOOTER -->
